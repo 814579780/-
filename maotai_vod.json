@@ -1,46 +1,37 @@
-// 简单数组
 [
-  {/* Iconfig */
-    "id": "$UUID_01", // 唯一标识(不能重复)
-    "name": "茅台资源站", // 名称
-    "type": 1, // 源类型(0: maccms, 1: JS/universal)
-    "logo": "", // 图标 URL
-    "desc": "", // 源介绍
-    "nsfw": false, // 是否为 NSFW 内容
-    "status": true, // 源状态(true: 启用, false: 禁用)
-    "api": "https://caiji.maotaizy.cc/api.php/provide/vod/at/josn/", // API 地址
-    "extra": { // 额外配置
-      // ========== 通用配置 ==========
-      "jiexiUrl": "", // 视频解析接口 URL (可选，功能待完善)
-      "gfw": false, // 是否需要代理访问 (可选)
-      "searchLimit": 20, // 搜索结果每页数量 (可选，maccms默认20，JS默认10)
-      // ========== maccms 源配置特有分类 (type=0) ==========
-      "category": "", // 分类 ID 或名称 (可选，用于筛选特定分类)
-      // ========== JS 源配置 (type=1) ==========
+  {
+    "id": "$UUID_01", 
+    "name": "茅台资源站", 
+    "type": 1, 
+    "logo": "", 
+    "desc": "",
+    "nsfw": false,
+    "status": true,
+    "api": "https://caiji.maotaizy.cc/api.php/provide/vod/at/josn/", 
+    "extra": { 
+      "jiexiUrl": "", 
+      "gfw": false, 
+      "searchLimit": 20, 
+      "category": "",
       "js": {
-        "category": "$JS函数名 | 真实的分类数组", // 分类函数或数组
-        "home": "$JS函数名", // 首页函数
-        "search": "$JS函数名", // 搜索函数
-        "detail": "$JS函数名", // 详情函数
-        "parseIframe": "$JS函数名" // 解析iframe函数(可选)
+        "category": "$JS函数名 | 真实的分类数组",
+        "home": "$JS函数名", 
+        "search": "$JS函数名",
+        "detail": "$JS函数名",
+        "parseIframe": "$JS函数名"
       },
-      // ========== 模板配置 (可选) ==========
-      "template": "template_id", // 使用预定义的模板 ID(目前只有t4)
-      // ========== 视频嗅探配置 (可选) ==========
-      // 当 parseIframe 未实现时自动启用
+      "template": "template_id", 
       "sniffer": {
-        "mode": 0, // 嗅探模式: 0=返回第一个URL, 1=返回所有URL
-        "timeout": 10000, // 超时时间(毫秒)
-        "customRegex": "", // 自定义正则表达式(可选)
-        "exclude": "", // 排除规则(可选)
-        "script": "", // 页面加载后执行的JS脚本(可选)
-        "initScript": "" // 页面初始化时执行的JS脚本(可选)
+        "mode": 0, 
+        "timeout": 10000, 
+        "customRegex": "",
+        "exclude": "", 
+        "script": "",
+        "initScript": "" 
       }
     }
   }
 ]
-
-// 复杂对象
 {
   "sites": [], /* Array<Iconfig> */
   "data": [],  /* Array<Iconfig> */
