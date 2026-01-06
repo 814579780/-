@@ -33,7 +33,7 @@
   }
 ]
 {
-  "sites": [], /* Array<Iconfig> */
-  "data": [],  /* Array<Iconfig> */
-  "lives": [], /* Array<ILiveItem> */
+  "sites": [],
+  "data": [],
+  "lives": [],
 }
